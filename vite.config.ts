@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), viteSingleFile()],
-  base: '/Timer_StopWach/', 
+  base: 'https://rouaanouri.github.io/Timer_StopWach/', 
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
