@@ -47,8 +47,8 @@ export default function App() {
   >
     <StopwatchIcon className="h-5 w-5" />
     Stopwatch
-  </button>
-</div>
+      </button>
+    </div>
 
        
 
@@ -75,7 +75,7 @@ export default function App() {
         </section>
 
         <footer className="text-center text-xs text-blueberry-300/50">
-          By Rouaa Nouri -2026
+         Developed By Rouaa Nouri -2026
         </footer>
       </main>
     </div>
