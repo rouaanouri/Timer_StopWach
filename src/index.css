@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blueberry-950: #06040f;
+  --color-blueberry-900: #0d0a24;
+  --color-blueberry-850: #120c33;
+  --color-blueberry-800: #1a1140;
+  --color-blueberry-700: #26185c;
+  --color-blueberry-600: #382284;
+  --color-blueberry-500: #5233ab;
+  --color-blueberry-400: #7c4fd8;
+  --color-blueberry-300: #a586ec;
+  --color-blueberry-200: #cbb8f5;
+
+  --color-water-deep: #23125a;
+  --color-water-mid: #4b2fb0;
+  --color-water-light: #7c5cf0;
+  --color-water-foam: #b7a3ff;
+
+  --font-arabic: "Tajawal", "Segoe UI", sans-serif;
+  --font-display: "Orbitron", "Tajawal", sans-serif;
+}
+
+html,
+body {
+  background-color: var(--color-blueberry-950);
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-arabic);
+  color: #ece9ff;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-blueberry-400);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-blueberry-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-blueberry-600);
+  border-radius: 8px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-blueberry-950);
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 70% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 40% 80%, rgba(196,181,253,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 85% 20%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(196,181,253,0.5), transparent),
+    radial-gradient(2px 2px at 10% 65%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 92% 85%, rgba(255,255,255,0.4), transparent);
+  background-size: 100% 100%;
+}
+
+.nebula {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(50% 40% at 15% 20%, rgba(124,79,216,0.25), transparent 70%),
+    radial-gradient(45% 35% at 85% 75%, rgba(82,51,171,0.3), transparent 70%),
+    radial-gradient(35% 30% at 60% 10%, rgba(167,134,236,0.15), transparent 70%);
+}
+
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.wave-svg {
+  animation: wave-move 6s linear infinite;
+}
+.wave-svg-slow {
+  animation: wave-move 10s linear infinite reverse;
+}
+
+.water-rise {
+  transition: none;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 25px 6px rgba(167,134,236,0.55), 0 0 60px 12px rgba(82,51,171,0.35); }
+  50% { box-shadow: 0 0 45px 14px rgba(203,184,245,0.85), 0 0 90px 25px rgba(124,79,216,0.55); }
+}
+.glow-pulse {
+  animation: glow-pulse 5s ease-out infinite;
+}
+
+@keyframes soft-glow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(124,79,216,0.55)); }
+  50% { filter: drop-shadow(0 0 18px rgba(167,134,236,0.85)); }
+}
+.soft-glow {
+  animation: soft-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.planet-spin {
+  animation: spin-slow linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.twinkle {
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float-y {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

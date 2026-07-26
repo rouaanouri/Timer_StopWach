@@ -1,0 +1,20 @@
+# Dependencies (ثقيلة جداً ولا ترفع)
+node_modules
+
+# Build outputs (مخرجات البناء المجهزة للإنتاج)
+dist
+build
+.next
+
+# Environment variables (الملفات السرية)
+.env
+.env.local
+.env.production
+
+# Editor settings (إعدادات المحرر المحلية)
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
