@@ -75,7 +75,7 @@ export default function App() {
         </section>
 
         <footer className="text-center text-xs text-blueberry-300/50">
-         Developed By Rouaa Nouri -2026
+         Developed  By Rouaa Nouri -2026
         </footer>
       </main>
     </div>
