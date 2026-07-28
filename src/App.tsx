@@ -7,7 +7,7 @@ export default function App() {
 
   const isTimer = activeTab === "timer";
   const isStopwatch = activeTab === "stopwatch";
-
+// no big issues your code is good so far it's good for real life project but next time even if it's not 100% good try to write it without any help of the ai
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden bg-blueberry-950">
       <div className="starfield" />
